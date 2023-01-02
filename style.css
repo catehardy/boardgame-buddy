@@ -1,0 +1,84 @@
+:root {
+    --dark-orchid: #A64AC9;
+    --tangerine-yellow: #FCCD04;
+    --bright-turquoise: #17E9E0;
+    --peach: #FFB48F;
+    --biscuit: #F5E6CC;
+    --blue-violet: #8a2be2;
+  }
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    
+    background: linear-gradient(to right bottom, var(--peach) 50%, var(--biscuit) 50%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+	text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: var(--blue-violet);
+}
+
+.grid-container {
+	display: grid;
+	justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.grid-item {
+    display: grid;
+	align-self: center;
+    width: 450px;
+	background-color: #FFF;
+	padding: 15px 15px 45px;
+	border-radius: 8px;
+}
+
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.4rem;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: var(--blue-violet);
+}
+
+#boardgame-searchfield {
+    width: 60%;
+    padding: 7px 3px;
+    border-width: 1.6px;
+    border-radius: 3px;
+}
+
+input:focus { 
+    outline: none;
+    border-color: var(--blue-violet);
+    box-shadow: 0 0 10px var(--blue-violet);
+}
+textarea:focus { 
+    outline: none;
+    border-color: var(--blue-violet);
+    box-shadow: 0 0 10px var(--blue-violet);
+}
+
+.button {
+    background-color: var(--blue-violet);
+    color: #FFF;
+    margin-left: 2px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 3px;
+}
