@@ -1,10 +1,10 @@
-## WIP
+# WIP
 
 # Board Game Buddy
 ## An app for discovering board games and sharing them with your friends.
 
 ## Current features:
-- look up games using the (Board Game Atlas API)[https://www.boardgameatlas.com/api/docs]
+- look up games using the [Board Game Atlas API](https://www.boardgameatlas.com/api/docs)
 
 ## Planned features (MVP):
 - view game results within the app (it currently links to BGA results)
