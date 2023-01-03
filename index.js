@@ -1,34 +1,31 @@
 function displayResult() {
     const input = document.getElementById("boardgame-searchfield").value;
     if (input) {
-        hideSearchDropdown();
         // Remove previous results from display
+        hideSearchDropdown();
         let parent = document.getElementById("api-spot");
         empty(parent);
         
         lookupUserInput()
         .then((response) => {
             const gameData = response;
-            console.log("game data: ", gameData); // TODO: remove this log before deploying
+            console.log("game data: ", gameData); // TODO: remove this log once search feature completed
             
             const apiDiv = document.querySelector("#api-spot");
             const inputVal = document.getElementById("boardgame-searchfield").value;
             const header = document.createElement("h2");
-            header.innerText = `Results for "${inputVal}":`;
+            header.innerText = `Results for "${inputVal}"`;
+            header.classList.add("purple-block");
             
             apiDiv.appendChild(header);
             
             // Display results of game search in dropdown menu
             for (let i = 0; i < gameData.games.length; i++) {
-                console.log(gameData.games[i].name); // TODO: remove this log before deploying
                 const option = gameData.games[i].name;
                 const addOption = document.createElement("p");
                 addOption.innerText = option;
                 apiDiv.appendChild(link(option, gameData.games[i].url));
             }
-            
-            // Clear search form
-            document.getElementById("boardgame-search").reset();
             
             showSearchDropdown();
         })
