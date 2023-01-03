@@ -15,7 +15,7 @@ function displayResult() {
             const inputVal = document.getElementById("boardgame-searchfield").value;
             const header = document.createElement("h2");
             header.innerText = `Results for "${inputVal}"`;
-            header.classList.add("purple-block");
+            header.classList.add("purple-text-block");
             
             apiDiv.appendChild(header);
             
