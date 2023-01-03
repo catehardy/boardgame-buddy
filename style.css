@@ -17,30 +17,29 @@ body {
     border: 0;
     height: 100%;
     width: 100%;
-    
     background: linear-gradient(to right bottom, var(--peach) 50%, var(--biscuit) 50%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
-	text-align: center;
+    text-align: center;
     font-family: 'Poppins', sans-serif;
     color: var(--blue-violet);
 }
 
 .grid-container {
-	display: grid;
-	justify-content: center;
+    display: grid;
+    justify-content: center;
     height: 100%;
     width: 100%;
 }
 
 .grid-item {
     display: grid;
-	align-self: center;
-    width: 450px;
-	background-color: #FFF;
-	padding: 15px 15px 45px;
-	border-radius: 8px;
+    /* align-self: center; */
+    width: 500px;
+    height: 200px;
+    background-color: #FFF;
+    /* padding: 15px 15px 45px; */
+    border-radius: 8px;
 }
 
 h1 {
@@ -54,6 +53,10 @@ hr {
     margin-top: 30px;
     margin-bottom: 20px;
     background-color: var(--blue-violet);
+}
+
+.boardgame-search {
+    width: 500px;
 }
 
 #boardgame-searchfield {
@@ -82,3 +85,35 @@ textarea:focus {
     border: none;
     border-radius: 3px;
 }
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFF;
+    border-radius: 8px;
+    min-width: 500px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 40px;
+}
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: var(--peach);}
+  
+/* Show or hide the dropdown menu with JS */
+.show {display:block;}

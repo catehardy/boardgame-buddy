@@ -1,3 +1,41 @@
+function displayResult() {
+    const input = document.getElementById("boardgame-searchfield").value;
+    if (input) {
+        hideSearchDropdown();
+        // Remove previous results from display
+        let parent = document.getElementById("api-spot");
+        empty(parent);
+        
+        lookupUserInput()
+        .then((response) => {
+            const gameData = response;
+            console.log("game data: ", gameData); // TODO: remove this log before deploying
+            
+            const apiDiv = document.querySelector("#api-spot");
+            const inputVal = document.getElementById("boardgame-searchfield").value;
+            const header = document.createElement("h2");
+            header.innerText = `Results for "${inputVal}":`;
+            
+            apiDiv.appendChild(header);
+            
+            // Display results of game search in dropdown menu
+            for (let i = 0; i < gameData.games.length; i++) {
+                console.log(gameData.games[i].name); // TODO: remove this log before deploying
+                const option = gameData.games[i].name;
+                const addOption = document.createElement("p");
+                addOption.innerText = option;
+                apiDiv.appendChild(link(option, gameData.games[i].url));
+            }
+            
+            // Clear search form
+            document.getElementById("boardgame-search").reset();
+            
+            showSearchDropdown();
+        })
+        .catch((error) => console.error(error));
+    }
+}
+
 function lookupUserInput() {
   const game = document.getElementById("boardgame-searchfield").value;
   return fetch(
@@ -11,44 +49,27 @@ function lookupUserInput() {
 }
 
 function empty(element) {
-  element.replaceChildren();
+    element.replaceChildren();
 }
 
-function displayResult() {
-  const input = document.getElementById("boardgame-searchfield").value;
-  if (input) {
-    // Remove previous results from display
-    let parent = document.getElementById("api-spot");
-    empty(parent);
+// manage search dropdown visibility
+showSearchDropdown = () =>
+document.getElementById("search-dropdown").classList.add("show");
+hideSearchDropdown = () =>
+document.getElementById("search-dropdown").classList.remove("show");
+// hide search dropdown if user clicks away
+window.onclick = function(e) {
+    if (!e.target.matches(".dropdown-content")) {
+        hideSearchDropdown();
+    }
+}
 
-    lookupUserInput()
-      .then((response) => {
-        const gameData = response;
-        console.log("game data: ", gameData);
-
-        const myDiv = document.querySelector("#api-spot");
-        const horizontalRule = document.createElement("hr");
-        const inputVal = document.getElementById("boardgame-searchfield").value;
-        const header = document.createElement("h2");
-        header.innerText = `Results for "${inputVal}":`;
-
-        myDiv.appendChild(horizontalRule);
-        myDiv.appendChild(header);
-
-        // Display results of game search
-        for (let i = 0; i < gameData.games.length; i++) {
-          console.log(gameData.games[i].name);
-          const option = gameData.games[i].name;
-          const addOption = document.createElement("p");
-          addOption.innerText = option;
-          myDiv.appendChild(addOption);
-        }
-
-        // Clear search form
-        document.getElementById("boardgame-search").reset();
-      })
-      .catch((error) => console.error(error));
-  }
+// create text links - used for search dropdown
+function link(text, href) {
+  let a = document.createElement("a");
+  a.textContent = text;
+  a.href = href;
+  return a;
 }
 
 function main() {
