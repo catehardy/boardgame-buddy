@@ -10,23 +10,26 @@ function displayResult() {
         .then((response) => {
             const gameData = response;
             console.log("game data: ", gameData); // TODO: remove this log once search feature completed
-            
             const apiDiv = document.querySelector("#api-spot");
             const inputVal = document.getElementById("boardgame-searchfield").value;
             const header = document.createElement("h2");
-            header.innerText = `Results for "${inputVal}"`;
-            header.classList.add("purple-text-block");
-            
-            apiDiv.appendChild(header);
-            
-            // Display results of game search in dropdown menu
-            for (let i = 0; i < gameData.games.length; i++) {
-                const option = gameData.games[i].name;
-                const addOption = document.createElement("p");
-                addOption.innerText = option;
-                apiDiv.appendChild(link(option, gameData.games[i].url));
+            if (!gameData.count) {
+              header.innerText = `Sorry, no results for "${inputVal}"`;
+              header.classList.add("purple-text-block");
+              apiDiv.appendChild(header);
+            } else {
+              header.innerText = `Results for "${inputVal}"`;
+              header.classList.add("purple-text-block");
+              apiDiv.appendChild(header);
+              
+              // Display results of game search in dropdown menu
+              for (let i = 0; i < gameData.games.length; i++) {
+                  const option = gameData.games[i].name;
+                  const addOption = document.createElement("p");
+                  addOption.innerText = option;
+                  apiDiv.appendChild(link(option, gameData.games[i].url));
+              }
             }
-            
             showSearchDropdown();
         })
         .catch((error) => console.error(error));
