@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Board Game Buddy</title>
     <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
 
     <!-- stylesheets for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,20 +16,40 @@
   </head>
 
   <body>
-    <div class="grid-container">
-      <div class="grid-item">
-        <h1>Board Game Buddy</h1>
+
+    <header>
+      <input type="checkbox" id="check">
+      <nav class="sticky">
+        <div class="icon">BGB</div>
+
+        <div class="search-box">
           <div class ="dropdown">
-            <form id="boardgame-search">
-              <input id="boardgame-searchfield" type="search" placeholder="Search for a board game...">
-              <input id="user-submission" type="button" class="button" value="Submit">
+            <form id="boardgame-search" class="search-box">
+              <input id="boardgame-searchfield" type="search" placeholder="Search for a game...">
+              <span class="fa fa-search" id="user-submission"></span>
             </form>
             <div id="search-dropdown" class="dropdown-content">
               <div id="api-spot"></div>
             </div>
           </div>
-      </div>
-    </div>
+        </div>
+
+        <ol>
+          <li><a href="#">My Games</a></li>
+          <li><a href="#">Friends</a></li>
+          <li><a href="#">Login</a></li>
+        </ol>
+        <label for="check" class="bar">
+          <span class="fa fa-bars" id="bars"></span>
+          <span class="fa fa-times" id="times"></span>
+        </label>
+      </nav>
+      <section></section>
+    </header>
+
+
+
     <script src="index.js"></script>
   </body>
+
 </html>

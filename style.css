@@ -1,3 +1,8 @@
+/* include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --dark-orchid: #A64AC9;
     --tangerine-yellow: #FCCD04;
@@ -9,6 +14,7 @@
 
 html {
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -22,55 +28,17 @@ body {
     background-attachment: fixed;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    color: var(--blue-violet);
-}
-
-.grid-container {
-    display: grid;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-.grid-item {
-    display: grid;
-    /* align-self: center; */
-    width: 500px;
-    height: 200px;
-    background-color: #FFF;
-    margin-top: 4px;
-    /* padding: 15px 15px 45px; */
-    border-radius: 8px;
 }
 
 h1 {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 2.4rem;
-}
-
-hr {
-    border: 0;
-    height: 2px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    background-color: var(--blue-violet);
-}
-
-.boardgame-search {
-    width: 500px;
-}
-
-#boardgame-searchfield {
-    width: 60%;
-    padding: 7px 3px;
-    border-width: 1.6px;
-    border-radius: 3px;
+    font-size: 2rem;
 }
 
 #boardgame-searchfield:focus { 
     outline: none;
-    border-color: var(--dark-orchid);
-    box-shadow: 0 0 10px var(--dark-orchid);
+    border-color: #FFF;
+    box-shadow: 0 0 10px #FFF;
 }
 textarea:focus { 
     outline: none;
@@ -78,38 +46,25 @@ textarea:focus {
     box-shadow: 0 0 10px var(--dark-orchid);
 }
 
-.button {
-    background-color: var(--dark-orchid);
-    color: #FFF;
-    margin-left: 2px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 3px;
-}
-
-.button:hover {
-    background-color: var(--blue-violet);
-}
-
-/* The container <div> - needed to position the dropdown content */
+/* The container div - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
   }
   
-/* Dropdown Content (Hidden by Default) */
+/* Dropdown Content (hidden by default) */
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #FFF;
     border-radius: 8px;
-    width: 500px;
+    width: 484px;
     max-height: 636px;
     overflow-x: hidden;
     overflow-y: scroll;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    margin-top: 40px;
+    margin-top: 20px;
 }
   
 /* Links inside the dropdown */
@@ -124,7 +79,9 @@ textarea:focus {
 .dropdown-content a:hover {background-color: var(--peach);}
   
 /* Show or hide the dropdown menu with JS */
-.show {display:block;}
+.show {
+    display:block;
+}
 
 .purple-text-block {
     display: block;
@@ -134,4 +91,230 @@ textarea:focus {
     padding-bottom: 8px;
     color: #FFF;
     background-color: var(--dark-orchid);
+}
+
+/* NAV */
+
+nav {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 5px 30px;
+    background: var(--dark-orchid);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+nav .icon {
+    font-size: 35px;
+    font-weight: 900;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+    align-self: center;
+    /* padding aligns site icon vertically - capitals are all ascenders in this font
+    padding-top: 6px; */
+}
+
+nav ol {
+    display: flex;
+    list-style: none;
+    margin: auto 0;
+}
+
+nav ol li {
+    margin: 0 8px;
+}
+
+nav ol li a {
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    letter-spacing: 0.8px;
+    padding: 5px 10px;
+}
+
+nav ol li:hover a {
+    background: #FFF;
+    color: var(--dark-orchid);
+}
+
+nav .search-box {
+    display: flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px;
+}
+
+nav .search-box input {
+    border: none;
+    height: 100%;
+    border-radius: 4px 0 0 4px;
+    background: rgba(255, 255, 255, 0.2);
+    color:#FFF;
+    padding: 6px 10px;
+    margin-right: 0;
+    font-size: 18px;
+    width: 450px;
+}
+
+nav .search-box span {
+    color: var(--dark-orchid);
+    background: #FFF;
+    margin: 0;
+    font-size: 18px;
+    height: 100%;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 0 4px 4px 0;
+}
+
+nav .search-box span:hover {
+    color: #FFF;
+}
+
+nav .search-box span::after {
+    height: 100%;
+    width: 0%;
+    content: '';
+    background: var(--peach);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 0 4px 4px 0;
+    transition: 0.3s;
+}
+
+nav .search-box span:hover::after {
+    width: 100%;
+}
+
+nav .bar {
+    position: relative;
+    margin: auto;
+    display: none;
+}
+
+nav .bar span {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 35px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.search-box ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #FFF;
+    opacity: 0.9; /* Firefox */
+}
+    
+.search-box :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #FFF;
+}
+    
+.search-box ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #FFF;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1000px) {
+    nav {
+        display: block;
+        padding: 0;
+    }
+    nav .icon {
+        display: inline-block;
+        padding: 15px 30px;
+    }
+    nav .search-box {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    nav .search-box input {
+        width: 90%;
+    }
+    nav ol {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        background: #FFF;
+        height: 0;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+    nav ol li {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        transition: 0.3s 0.1s all;
+        opacity: 0;
+    }
+    nav ol li a {
+        color: black;
+        font-size: 28px;
+        padding: 25px;
+        display: block;
+    }
+    nav ol li:hover a {
+        background: var(--peach);
+        color: black;
+    }
+    nav ol li:nth-child(1) {
+        transform: translateX(-150px);
+    }
+    nav ol li:nth-child(2) {
+        transform: translateX(-200px);
+    }
+    nav ol li:nth-child(3) {
+        transform: translateX(-250px);
+    }
+    nav .bar {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 60px;
+        cursor: pointer;
+    }
+    nav #bars {
+        padding-top: 4px;
+    }
+    nav .bar #times {
+        display: none;
+    }
+    #check:checked ~ nav .bar #times {
+        display: block;
+    }
+    #check:checked ~ nav .bar #bars {
+        display: none;
+    }
+    #check:checked ~ nav ol {
+        visibility: visible;
+        height: 100%;
+    }
+    #check:checked ~ nav ol li:nth-child(1),
+    #check:checked ~ nav ol li:nth-child(2),
+    #check:checked ~ nav ol li:nth-child(3) {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .dropdown-content {
+        width: 303px;
+        max-height: 400px;
+        font-size: 14px;
+    }
 }
