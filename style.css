@@ -28,11 +28,16 @@ body {
     background-attachment: fixed;
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    font-size: 14px;
 }
 
 h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 2rem;
+}
+
+#boardgame-searchfield {
+    font-size: 13px;
 }
 
 #boardgame-searchfield:focus { 
@@ -229,7 +234,7 @@ input[type="checkbox"] {
 
 /* media queries */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 500px) {
     nav {
         display: block;
         padding: 0;
@@ -240,6 +245,7 @@ input[type="checkbox"] {
     }
     nav .search-box {
         width: 100%;
+        min-width: 300px;
         display: inline-flex;
         justify-content: center;
         margin-bottom: 15px;
@@ -313,7 +319,98 @@ input[type="checkbox"] {
         opacity: 1;
     }
     .dropdown-content {
-        width: 303px;
+        width: 300px;
+        max-height: 400px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+    nav {
+        display: block;
+        padding: 0;
+    }
+    nav .icon {
+        display: inline-block;
+        padding: 15px 30px;
+    }
+    nav .search-box {
+        width: 100%;
+        min-width: 500px;
+        display: inline-flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    nav .search-box input {
+        width: 90%;
+    }
+    nav ol {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        background: #FFF;
+        height: 0;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+    nav ol li {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        transition: 0.3s 0.1s all;
+        opacity: 0;
+    }
+    nav ol li a {
+        color: black;
+        font-size: 28px;
+        padding: 25px;
+        display: block;
+    }
+    nav ol li:hover a {
+        background: var(--peach);
+        color: black;
+    }
+    nav ol li:nth-child(1) {
+        transform: translateX(-150px);
+    }
+    nav ol li:nth-child(2) {
+        transform: translateX(-200px);
+    }
+    nav ol li:nth-child(3) {
+        transform: translateX(-250px);
+    }
+    nav .bar {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 60px;
+        cursor: pointer;
+    }
+    nav #bars {
+        padding-top: 4px;
+    }
+    nav .bar #times {
+        display: none;
+    }
+    #check:checked ~ nav .bar #times {
+        display: block;
+    }
+    #check:checked ~ nav .bar #bars {
+        display: none;
+    }
+    #check:checked ~ nav ol {
+        visibility: visible;
+        height: 100%;
+    }
+    #check:checked ~ nav ol li:nth-child(1),
+    #check:checked ~ nav ol li:nth-child(2),
+    #check:checked ~ nav ol li:nth-child(3) {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .dropdown-content {
+        width: 500px;
         max-height: 400px;
         font-size: 14px;
     }
