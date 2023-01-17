@@ -28,7 +28,7 @@ body {
     background-attachment: fixed;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 h1 {
@@ -37,18 +37,13 @@ h1 {
 }
 
 #boardgame-searchfield {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 #boardgame-searchfield:focus { 
     outline: none;
     border-color: #FFF;
     box-shadow: 0 0 10px #FFF;
-}
-textarea:focus { 
-    outline: none;
-    border-color: var(--dark-orchid);
-    box-shadow: 0 0 10px var(--dark-orchid);
 }
 
 /* The container div - needed to position the dropdown content */
@@ -117,8 +112,15 @@ nav .icon {
     font-family: 'Space Grotesk', sans-serif;
     cursor: pointer;
     align-self: center;
-    /* padding aligns site icon vertically - capitals are all ascenders in this font
-    padding-top: 6px; */
+}
+
+nav .icon a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+nav .icon a:hover {
+    color: var(--biscuit);
 }
 
 nav ol {
@@ -134,6 +136,7 @@ nav ol li {
 nav ol li a {
     color: #fff;
     font-size: 1em;
+    font-weight: 500;
     text-decoration: none;
     letter-spacing: 0.8px;
     padding: 5px 10px;
@@ -141,6 +144,7 @@ nav ol li a {
 
 nav ol li:hover a {
     background: #FFF;
+    border-radius: 4px;
     color: var(--dark-orchid);
 }
 
@@ -325,7 +329,7 @@ input[type="checkbox"] {
     }
 }
 
-@media only screen and (min-width: 500px) and (max-width: 1000px) {
+@media only screen and (min-width: 500px) and (max-width: 1190px) {
     nav {
         display: block;
         padding: 0;
@@ -336,7 +340,7 @@ input[type="checkbox"] {
     }
     nav .search-box {
         width: 100%;
-        min-width: 500px;
+        min-width: 490px;
         display: inline-flex;
         justify-content: center;
         margin-bottom: 15px;
@@ -363,7 +367,7 @@ input[type="checkbox"] {
     }
     nav ol li a {
         color: black;
-        font-size: 28px;
+        font-size: 26px;
         padding: 25px;
         display: block;
     }
@@ -410,7 +414,7 @@ input[type="checkbox"] {
         opacity: 1;
     }
     .dropdown-content {
-        width: 500px;
+        width: 490px;
         max-height: 400px;
         font-size: 14px;
     }
