@@ -94,26 +94,33 @@ h1 {
 .grid-item-2 {
     grid-area: article-1;
     background: #FFF;
+    margin-right: -5px;
 }
 
 .grid-item-3 {
     grid-area: article-2;
     background: var(--bright-turquoise);
+    margin-right: -5px;
+    margin-bottom: -2.5px;
 }
 
 .grid-item-4 {
     grid-area: article-3;
     background: var(--peach);
+    margin-bottom: -2.5px;
 }
 
 .grid-item-5 {
     grid-area: article-4;
     background: var(--peach);
+    margin-right: -5px;
+    margin-top: -2.5px;
 }
 
 .grid-item-6 {
     grid-area: article-5;
     background: var(--bright-turquoise);
+    margin-top: -2.5px;
 }
 
 .grid-item-7 {
