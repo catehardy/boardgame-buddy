@@ -23,7 +23,7 @@ body {
     border: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(to right bottom, var(--peach) 50%, var(--biscuit) 50%);
+    background: black;
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;
@@ -36,14 +36,77 @@ h1 {
     font-size: 2rem;
 }
 
+.grid-item {
+    border-radius: 4px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    margin: 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 340px 160px 160px 320px 320px;
+    row-gap: 15px;
+    column-gap: 15px;
+    grid-template-areas:
+    "header header header"
+    "article-1 article-2 article-3"
+    "article-1 article-4 article-5"
+    "carousel-1 carousel-1 carousel-1"
+    "carousel-2 carousel-2 carousel-2"
+}
+
+.grid-item-1 {
+    grid-area: header;
+    background: #FFF;
+}
+
+.grid-item-2 {
+    grid-area: article-1;
+    background: #FFF;
+}
+
+.grid-item-3 {
+    grid-area: article-2;
+    background: var(--bright-turquoise);
+}
+
+.grid-item-4 {
+    grid-area: article-3;
+    background: var(--peach);
+}
+
+.grid-item-5 {
+    grid-area: article-4;
+    background: var(--peach);
+}
+
+.grid-item-6 {
+    grid-area: article-5;
+    background: var(--bright-turquoise);
+}
+
+.grid-item-7 {
+    grid-area: carousel-1;
+    background: #FFF;
+}
+
+.grid-item-8 {
+    grid-area: carousel-2;
+    background: #FFF;
+}
+
 #boardgame-searchfield {
     font-size: 14px;
 }
 
-#boardgame-searchfield:focus { 
-    outline: none;
-    border-color: #FFF;
-    box-shadow: 0 0 10px #FFF;
+textarea:focus, input:focus { 
+    outline-width: 1.8px;
+    outline-style: solid;
+    outline-color: var(--peach);
 }
 
 /* The container div - needed to position the dropdown content */
