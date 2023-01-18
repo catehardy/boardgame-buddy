@@ -13,7 +13,7 @@
   }
 
 html {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
 }
 
@@ -21,7 +21,7 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     background: black;
     background-repeat: no-repeat;
@@ -36,6 +36,29 @@ h1 {
     font-size: 2rem;
 }
 
+.main-container {
+    min-height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1500px 1fr;
+    grid-template-rows: auto 1fr;
+    justify-content: space-evenly;
+    grid-template-areas:
+    "nav nav nav"
+    "left-margin content-grid right-margin"
+    "footer footer footer"
+}
+
+.left-margin {
+    grid-area: left-margin;
+    min-width: 80px;
+}
+
+.right-margin {
+    grid-area: right-margin;
+    min-width: 80px;
+}
+
 .grid-item {
     border-radius: 4px;
     min-height: 100px;
@@ -46,11 +69,15 @@ h1 {
 
 .grid-container {
     display: grid;
-    margin: 80px;
+    grid-area: content-grid;
+    justify-content: center;
+    margin: 80px 0 20px 0;
+    min-width: 1000px;
+    max-width: 1500px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 340px 160px 160px 320px 320px;
-    row-gap: 15px;
-    column-gap: 15px;
+    row-gap: 18px;
+    column-gap: 18px;
     grid-template-areas:
     "header header header"
     "article-1 article-2 article-3"
@@ -156,9 +183,23 @@ textarea:focus, input:focus {
     background-color: var(--dark-orchid);
 }
 
+footer {
+    grid-area: footer;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    height: 50px;
+    padding: 5px 30px;
+    background: var(--dark-orchid);
+}
+
 /* NAV */
 
 nav {
+    grid-area: nav;
     display: flex;
     width: 100%;
     position: relative;

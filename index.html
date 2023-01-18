@@ -17,48 +17,54 @@
 
   <body>
 
-    <header>
-      <input type="checkbox" id="check" title="toggle menu">
-      <nav class="sticky">
-        <div class="icon"><a href="#">BGB</a></div>
+    <div class="main-container">
 
-        <div class="search-box">
-          <div class ="dropdown">
-            <form id="boardgame-search" class="search-box">
-              <input id="boardgame-searchfield" type="search" placeholder="Search for a game...">
-              <span class="fa fa-search" id="user-submission"></span>
-            </form>
-            <div id="search-dropdown" class="dropdown-content">
-              <div id="api-spot"></div>
+      <header>
+        <input type="checkbox" id="check" title="toggle menu">
+        <nav class="sticky">
+          <div class="icon"><a href="#">BGB</a></div>
+  
+          <div class="search-box">
+            <div class ="dropdown">
+              <form id="boardgame-search" class="search-box">
+                <input id="boardgame-searchfield" type="search" placeholder="Search for a game...">
+                <span class="fa fa-search" id="user-submission"></span>
+              </form>
+              <div id="search-dropdown" class="dropdown-content">
+                <div id="api-spot"></div>
+              </div>
             </div>
           </div>
+  
+          <ol>
+            <li><a href="#">My Games</a></li>
+            <li><a href="#">Friends</a></li>
+            <li><a href="#">Login</a></li>
+          </ol>
+          <label for="check" class="bar">
+            <span class="fa fa-bars" id="bars"></span>
+            <span class="fa fa-times" id="times"></span>
+          </label>
+        </nav>
+  
+      </header>
+  
+      <main>
+        <div class="left-margin"></div>
+        <div class="grid-container">
+          <div class="grid-item grid-item-1">header</div>
+          <div class="grid-item grid-item-2">article 1: highlight</div>
+          <div class="grid-item grid-item-3">article 2</div>
+          <div class="grid-item grid-item-4">article 3</div>
+          <div class="grid-item grid-item-5">article 4</div>
+          <div class="grid-item grid-item-6">article 5</div>
+          <div class="grid-item grid-item-7">carousel 1</div>
+          <div class="grid-item grid-item-8">carousel 2</div>
         </div>
-
-        <ol>
-          <li><a href="#">My Games</a></li>
-          <li><a href="#">Friends</a></li>
-          <li><a href="#">Login</a></li>
-        </ol>
-        <label for="check" class="bar">
-          <span class="fa fa-bars" id="bars"></span>
-          <span class="fa fa-times" id="times"></span>
-        </label>
-      </nav>
-
-    </header>
-
-    <main>
-      <div class="grid-container">
-        <div class="grid-item grid-item-1">header</div>
-        <div class="grid-item grid-item-2">article 1: highlight</div>
-        <div class="grid-item grid-item-3">article 2</div>
-        <div class="grid-item grid-item-4">article 3</div>
-        <div class="grid-item grid-item-5">article 4</div>
-        <div class="grid-item grid-item-6">article 5</div>
-        <div class="grid-item grid-item-7">carousel 1</div>
-        <div class="grid-item grid-item-8">carousel 2</div>
-      </div>
-    </main>
+        <div class="right-margin"></div>
+      </main>
+      <footer>FOOTER &COPY 2023</footer>
+    </div>
 
     <script src="index.js"></script>
   </body>
