@@ -246,6 +246,7 @@ input[type="checkbox"] {
     nav .icon {
         display: inline-block;
         padding: 15px 30px;
+        font-size: 22px;
     }
     nav .search-box {
         width: 100%;
@@ -302,9 +303,12 @@ input[type="checkbox"] {
     }
     nav #bars {
         padding-top: 4px;
+        font-size: 22px;
     }
     nav .bar #times {
         display: none;
+        padding-top: 4px;
+        font-size: 22px;
     }
     #check:checked ~ nav .bar #times {
         display: block;
