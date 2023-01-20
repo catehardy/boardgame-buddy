@@ -165,7 +165,7 @@ h1 {
 
 textarea:focus,
 input:focus {
-  outline-width: 1.8px;
+  outline-width: 2px;
   outline-style: solid;
   outline-color: var(--peach);
 }
@@ -293,7 +293,7 @@ nav .search-box {
 nav .search-box input {
   border: none;
   height: 100%;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
   padding: 6px 10px;
@@ -313,6 +313,7 @@ nav .search-box span {
   cursor: pointer;
   z-index: 1;
   border-radius: 0 4px 4px 0;
+  margin-left: -7%;
 }
 
 nav .search-box span:hover {
@@ -377,29 +378,33 @@ input[type="checkbox"] {
 /* media queries */
 
 @media only screen and (max-width: 500px) {
-    .grid-container {
-        margin: 80px 0 10px 0;
-        min-width: 300px;
-        max-width: 490px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 300px 300px 160px 160px 160px 160px 220px 220px;
-        row-gap: 10px;
-        column-gap: 10px;
-        grid-template-areas:
-            "header"
-            "article-1"
-            "article-2"
-            "article-3"
-            "article-5"
-            "article-4"
-            "carousel-1"
-            "carousel-2";
-        }
-    .grid-item-2, .grid-item-3, .grid-item-4, .grid-item-5, .grid-item-6 {
-        margin: 0;
-    }
-  
-    nav {
+  .grid-container {
+    margin: 80px 0 10px 0;
+    min-width: 300px;
+    max-width: 490px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 300px 160px 160px 160px 160px 220px 220px;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-areas:
+      "header"
+      "article-1"
+      "article-2"
+      "article-3"
+      "article-5"
+      "article-4"
+      "carousel-1"
+      "carousel-2";
+  }
+  .grid-item-2,
+  .grid-item-3,
+  .grid-item-4,
+  .grid-item-5,
+  .grid-item-6 {
+    margin: 0;
+  }
+
+  nav {
     display: block;
     padding: 0;
   }
@@ -416,7 +421,20 @@ input[type="checkbox"] {
     margin-bottom: 15px;
   }
   nav .search-box input {
-    width: 90%;
+    width: 100%;
+  }
+  nav .search-box span {
+    /* color: var(--dark-orchid);
+    background: #fff;
+    margin: 0;
+    font-size: 18px;
+    height: 100%;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 0 4px 4px 0; */
+    margin-left: -11.4%;
   }
   nav ol {
     display: flex;
@@ -494,26 +512,30 @@ input[type="checkbox"] {
 }
 
 @media only screen and (min-width: 500px) and (max-width: 1190px) {
-    .grid-container {
-        margin: 80px 0 10px 0;
-        min-width: 490px;
-        max-width: 1180px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 300px 300px 160px 160px 220px 220px;
-        row-gap: 10px;
-        column-gap: 10px;
-        grid-template-areas:
-            "header header"
-            "article-1 article-1"
-            "article-2 article-3"
-            "article-4 article-5"
-            "carousel-1 carousel-1"
-            "carousel-2 carousel-2";
-        }
-    .grid-item-2, .grid-item-3, .grid-item-4, .grid-item-5, .grid-item-6 {
-        margin: 0;
-    }
-    nav {
+  .grid-container {
+    margin: 80px 0 10px 0;
+    min-width: 490px;
+    max-width: 1180px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px 160px 160px 220px 220px;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-areas:
+      "header header"
+      "article-1 article-1"
+      "article-2 article-3"
+      "article-4 article-5"
+      "carousel-1 carousel-1"
+      "carousel-2 carousel-2";
+  }
+  .grid-item-2,
+  .grid-item-3,
+  .grid-item-4,
+  .grid-item-5,
+  .grid-item-6 {
+    margin: 0;
+  }
+  nav {
     display: block;
     padding: 0;
   }
@@ -529,7 +551,7 @@ input[type="checkbox"] {
     margin-bottom: 15px;
   }
   nav .search-box input {
-    width: 90%;
+    width: 100%;
   }
   nav ol {
     display: flex;
