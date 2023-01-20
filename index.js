@@ -15,11 +15,11 @@ function displayResult() {
         const header = document.createElement("h2");
         if (!gameData.count) {
           header.innerText = `Sorry, no results for "${inputVal}"`;
-          header.classList.add("purple-text-block");
+          header.classList.add("results-header");
           apiDiv.appendChild(header);
         } else {
           header.innerText = `Results for "${inputVal}"`;
-          header.classList.add("purple-text-block");
+          header.classList.add("results-header");
           apiDiv.appendChild(header);
 
           // Display results of game search in dropdown menu
