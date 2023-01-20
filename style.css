@@ -562,6 +562,7 @@ input[type="checkbox"] {
     width: 350px;
     max-height: 400px;
     font-size: 14px;
+    margin-top: 14px;
   }
   
   .results-header {
