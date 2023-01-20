@@ -299,7 +299,7 @@ nav .search-box input {
   padding: 6px 10px;
   margin-right: 0;
   font-size: 18px;
-  width: 450px;
+  width: 485px;
 }
 
 nav .search-box span {
@@ -313,7 +313,7 @@ nav .search-box span {
   cursor: pointer;
   z-index: 1;
   border-radius: 0 4px 4px 0;
-  margin-left: -7%;
+  margin-left: -6.5%;
 }
 
 nav .search-box span:hover {
@@ -424,16 +424,6 @@ input[type="checkbox"] {
     width: 100%;
   }
   nav .search-box span {
-    /* color: var(--dark-orchid);
-    background: #fff;
-    margin: 0;
-    font-size: 18px;
-    height: 100%;
-    padding: 8px;
-    position: relative;
-    cursor: pointer;
-    z-index: 1;
-    border-radius: 0 4px 4px 0; */
     margin-left: -11.4%;
   }
   nav ol {
@@ -552,6 +542,9 @@ input[type="checkbox"] {
   }
   nav .search-box input {
     width: 100%;
+  }
+  nav .search-box span {
+    margin-left: -6.9%;
   }
   nav ol {
     display: flex;
