@@ -500,7 +500,10 @@ input[type="checkbox"] {
     font-size: 14px;
     margin-top: 0;
     border-radius: 0 0 8px 8px;
-    /* box-shadow: none; */
+  }
+
+  .results-header {
+    font-size: 16px;
   }
 }
 
@@ -559,5 +562,9 @@ input[type="checkbox"] {
     width: 350px;
     max-height: 400px;
     font-size: 14px;
+  }
+  
+  .results-header {
+    font-size: 20px;
   }
 }
