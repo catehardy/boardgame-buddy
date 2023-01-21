@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,30 +8,41 @@
     <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
 
     <!-- stylesheets for Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- webmanifest and favicons -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="any"><!-- 32×32 -->
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
-    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="any" />
+    <!-- 32×32 -->
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- 180×180 -->
+    <link rel="manifest" href="/manifest.webmanifest" />
   </head>
 
   <body>
     <div class="main-container">
-
       <header>
-        <input type="checkbox" id="check" title="toggle menu">
+        <input type="checkbox" id="check" title="toggle menu" />
         <nav>
           <h1 class="icon gradient-text"><a href="index.html">BGB</a></h1>
-  
+
           <div class="search-box">
-            <div class ="dropdown">
+            <div class="dropdown">
               <form id="boardgame-search" class="search-box">
-                <input id="boardgame-searchfield" type="search" placeholder="Search for a game...">
+                <input
+                  id="boardgame-searchfield"
+                  type="search"
+                  placeholder="Search for a game..."
+                />
                 <span class="fa fa-search" id="user-submission"></span>
               </form>
               <div id="search-dropdown" class="dropdown-content">
@@ -40,7 +50,7 @@
               </div>
             </div>
           </div>
-  
+
           <ol>
             <li><a href="#">My Games</a></li>
             <li><a href="#">Friends</a></li>
@@ -51,17 +61,55 @@
             <span class="fa fa-times" id="times"></span>
           </label>
         </nav>
-  
       </header>
-  
+
       <main>
         <div class="homepage-container">
           <div class="grid-item grid-item-1">secondary-nav</div>
-          <a href="#" class="grid-item grid-item-2"><image class="grid-item grid-item-2" src="images/board-games-with-lgbt-themes.png" alt="Cartoon of people playing cards with text '9 Board Games with LGBTQIA+ Themes'"></image></a>
-          <div class="grid-item grid-item-3">article 2</div>
-          <div class="grid-item grid-item-4">article 3</div>
-          <div class="grid-item grid-item-5">article 4</div>
-          <div class="grid-item grid-item-6">article 5</div>
+
+          <a href="#" class="grid-item grid-item-2">
+            <image
+              class="grid-item grid-item-2"
+              src="images/board-games-with-lgbt-themes.png"
+              alt="Drawing of three people playing cards, with caption '9 Board Games with LGBTQIA+ Themes'">
+            </image></a>
+
+          <div class="grid-item grid-item-3 article">
+            <image
+              class="article-image-small"
+              src="images/nordic-board-game-culture.png"
+              alt="Hnefatafl - a traditional Nordic board game">
+              </image>
+              <p class="article-text">Nordic Board Game Culture</p>
+          </div>
+
+          <div class="grid-item grid-item-4 article">
+            <image
+              class="article-image-small"
+              src="images/best-beginner-board-games-azul.png"
+              alt="Photo of the board game Azul">
+              </image>
+              <p class="article-text">12 Best Beginner Board Games</p>
+          </div>
+
+          <div class="grid-item grid-item-5 article">
+            <image
+              class="article-image-small"
+              src="images/anti-colonial-board-games-spirit-island.png"
+              alt="Photo of the board game Spirit Island">
+              </image>
+              <p class="article-text">9 Anti-Colonial Board Games</p>
+          </div>
+
+          <div class="grid-item grid-item-6 article">
+            <image
+              class="article-image-small"
+              src="images/history-of-board-games-go.png"
+              alt="Photo of the board game Go">
+              </image>
+              <p class="article-text">The History of Board Games</p>
+          </div>
+
           <div class="grid-item grid-item-7">carousel 1</div>
           <div class="grid-item grid-item-8">carousel 2</div>
         </div>
@@ -71,5 +119,4 @@
 
     <script src="index.js"></script>
   </body>
-
 </html>
