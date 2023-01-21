@@ -144,6 +144,11 @@ h1 {
   font-weight: 700;
 }
 
+a.article-text {
+  text-decoration: none;
+  color: #000;
+}
+
 /* NAVBAR SEARCH & DROPDOWN */
 
 #boardgame-searchfield {
@@ -599,7 +604,7 @@ footer {
 
   .dropdown-content {
     width: 350px;
-    max-height: 400px;
+    max-height: 560px;
     font-size: 14px;
     margin-top: 14px;
   }
