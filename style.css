@@ -55,10 +55,10 @@ h1 {
   grid-area: content-grid;
   justify-content: center;
   margin: 20px;
-  min-width: 1000px;
+  min-width: 1200px;
   max-width: 1500px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 340px 160px 160px 320px 320px;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-rows: 360px auto auto 320px 320px;
   row-gap: 18px;
   column-gap: 18px;
   grid-template-areas:
@@ -71,7 +71,7 @@ h1 {
 
 .grid-item {
   border-radius: 4px;
-  min-height: 100px;
+  /* min-height: 100px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,8 +84,9 @@ h1 {
 
 .grid-item-2 {
   grid-area: article-1;
-  background: #fff;
-  margin-right: -5px;
+  margin-right: -2.5px;
+  max-width: 400px;
+  height: auto;
 }
 
 .grid-item-3 {
@@ -367,7 +368,7 @@ footer {
   background: var(--dark-orchid);
 }
 
-/* media queries */
+/* MEDIA QUERIES */
 
 @media only screen and (max-width: 820px) {
   .homepage-container {
@@ -375,7 +376,7 @@ footer {
     min-width: 300px;
     max-width: 490px;
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 300px 160px 160px 160px 160px 220px 220px;
+    grid-template-rows: 340px 300px 160px 160px 160px 160px 220px 220px;
     row-gap: 10px;
     column-gap: 10px;
     grid-template-areas:
@@ -395,6 +396,10 @@ footer {
   .grid-item-5,
   .grid-item-6 {
     margin: 0;
+  }
+
+  .grid-item-2 {
+    max-width: 300px;
   }
 
   nav {
@@ -500,13 +505,13 @@ footer {
   }
 }
 
-@media only screen and (min-width: 820px) and (max-width: 1090px) {
+@media only screen and (min-width: 820px) and (max-width: 1250px) {
   .homepage-container {
     margin: 10px;
     min-width: 490px;
     max-width: 1180px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 300px 160px 160px 220px 220px;
+    grid-template-rows: 360px 600px 160px 160px 220px 220px;
     row-gap: 10px;
     column-gap: 10px;
     grid-template-areas:
@@ -524,6 +529,37 @@ footer {
   .grid-item-6 {
     margin: 0;
   }
+
+  /* .grid-item-1 {
+
+  } */
+
+  .grid-item-2 {
+    max-width: 600px;
+    height: auto;
+  }
+  
+  /* .grid-item-3 {
+  }
+  
+  .grid-item-4 {
+
+  }
+  
+  .grid-item-5 {
+  }
+  
+  .grid-item-6 {
+
+  }
+  
+  .grid-item-7 {
+
+  }
+  
+  .grid-item-8 {
+
+  } */
 
   nav {
     padding: 7px 20px;
