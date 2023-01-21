@@ -37,31 +37,6 @@ h1 {
   padding: 0;
 }
 
-/* rainbow hover effect */
-.gradient-text a {
-  background: linear-gradient(to right, crimson, pink, springgreen);
-  background-size: 200% 200%;
-  animation: rainbow 2s ease-in-out infinite;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: #fff;
-  transition: color 0.2s ease-in-out;
-}
-.gradient-text a:hover {
-  color: rgba(0, 0, 0, 0);
-}
-@keyframes rainbow {
-  0% {
-    background-position: left;
-  }
-  50% {
-    background-position: right;
-  }
-  100% {
-    background-position: left;
-  }
-}
-
 .main-container {
   min-height: 100%;
   width: 100%;
@@ -75,21 +50,11 @@ h1 {
     "footer";
 }
 
-.grid-item {
-  border-radius: 4px;
-  min-height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.grid-container {
+.homepage-container {
   display: grid;
   grid-area: content-grid;
   justify-content: center;
-  margin: 80px 0 20px 0;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 20px;
   min-width: 1000px;
   max-width: 1500px;
   grid-template-columns: 1fr 1fr 1fr;
@@ -97,11 +62,19 @@ h1 {
   row-gap: 18px;
   column-gap: 18px;
   grid-template-areas:
-    "secondary-nav secondary-nav secondary-nav"
-    "article-1 article-2 article-3"
-    "article-1 article-4 article-5"
-    "carousel-1 carousel-1 carousel-1"
-    "carousel-2 carousel-2 carousel-2";
+  "secondary-nav secondary-nav secondary-nav"
+  "article-1 article-2 article-3"
+  "article-1 article-4 article-5"
+  "carousel-1 carousel-1 carousel-1"
+  "carousel-2 carousel-2 carousel-2";
+}
+
+.grid-item {
+  border-radius: 4px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid-item-1 {
@@ -151,6 +124,8 @@ h1 {
   background: #fff;
 }
 
+/* NAVBAR SEARCH & DROPDOWN */
+
 #boardgame-searchfield {
   font-size: 14px;
 }
@@ -160,6 +135,7 @@ input:focus {
   outline-width: 2px;
   outline-style: solid;
   outline-color: var(--peach);
+  
 }
 
 /* The container div - needed to position the dropdown content */
@@ -168,7 +144,7 @@ input:focus {
   display: inline-block;
 }
 
-/* Dropdown Content (hidden by default) */
+/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -211,20 +187,33 @@ input:focus {
   background-color: var(--dark-orchid);
 }
 
-footer {
-  grid-area: footer;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  height: 50px;
-  padding: 5px 30px;
-  background: var(--dark-orchid);
-}
 
 /* NAV */
+
+/* rainbow hover effect */
+.gradient-text a {
+  background: linear-gradient(to right, crimson, pink, springgreen);
+  background-size: 200% 200%;
+  animation: rainbow 2s ease-in-out infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #fff;
+  transition: color 0.2s ease-in-out;
+}
+.gradient-text a:hover {
+  color: rgba(0, 0, 0, 0);
+}
+@keyframes rainbow {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
 
 header {
   grid-area: header;
@@ -291,6 +280,7 @@ nav .search-box {
 nav .search-box input {
   border: none;
   height: 100%;
+  -webkit-border-radius: 4px;
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
@@ -356,30 +346,32 @@ input[type="checkbox"] {
   color: #fff;
   opacity: 0.9; /* Firefox */
 }
-
 .search-box :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #fff;
 }
-
 .search-box ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #fff;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
+footer {
+  grid-area: footer;
+  display: flex;
   width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  height: 50px;
+  padding: 5px 30px;
+  background: var(--dark-orchid);
 }
 
 /* media queries */
 
 @media only screen and (max-width: 820px) {
-  .grid-container {
-    margin: 120px 0 10px 0;
-    padding-left: 8px;
-    padding-right: 8px;
+  .homepage-container {
+    margin: 10px;
     min-width: 300px;
     max-width: 490px;
     grid-template-columns: 1fr;
@@ -396,7 +388,7 @@ input[type="checkbox"] {
       "carousel-1"
       "carousel-2";
   }
-  
+
   .grid-item-2,
   .grid-item-3,
   .grid-item-4,
@@ -509,10 +501,8 @@ input[type="checkbox"] {
 }
 
 @media only screen and (min-width: 820px) and (max-width: 1090px) {
-  .grid-container {
-    margin: 60px 0 10px 0;
-    padding-left: 8px;
-    padding-right: 8px;
+  .homepage-container {
+    margin: 10px;
     min-width: 490px;
     max-width: 1180px;
     grid-template-columns: 1fr 1fr;
