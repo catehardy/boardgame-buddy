@@ -103,17 +103,12 @@ h1 {
   border-radius: 0 4px 4px 0;
 }
 
-/* .grid-item-1 {
-  grid-area: secondary-nav;
-  background: #fff;
-  justify-content: center;
-} */
-
 .grid-item-2 {
   grid-area: article-1;
-  margin-right: -2.5px;
+  margin-right: -5px;
   max-width: 400px;
   height: auto;
+  border-radius: 4px;
 }
 
 .grid-item-3 {
@@ -175,6 +170,27 @@ h1 {
 a.article-text {
   text-decoration: none;
   color: #000;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.main-article-text {
+  position: absolute;
+  bottom: 30px;
+  left: 70px;
+  padding: 0;
+  margin: 0;
+}
+
+p.main-article-text {
+  font-size: 32px;
+  font-weight: 900;
+  max-width: 260px;
 }
 
 /* NAVBAR SEARCH & DROPDOWN */
@@ -239,7 +255,6 @@ input:focus {
   color: #fff;
   background-color: var(--dark-orchid);
 }
-
 
 /* NAV */
 
@@ -333,7 +348,6 @@ nav .search-box {
 nav .search-box input {
   border: none;
   height: 100%;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
@@ -460,9 +474,9 @@ footer {
     border-radius: 0 0 4px 4px;
   }
 
-.grid-item {
-  max-width: 300px;
-}
+  .grid-item {
+    max-width: 300px;
+  }
 
   .grid-item-2,
   .grid-item-3,
@@ -481,6 +495,16 @@ footer {
     font-size: 17px;
     font-weight: 700;
     padding-left: 4px;
+  }
+
+  .main-article-text {
+    bottom: 26px;
+    left: 42px;
+  }
+  
+  p.main-article-text {
+    font-size: 22px;
+    max-width: 220px;
   }
 
   nav {
@@ -644,6 +668,16 @@ footer {
     font-size: 20px;
     font-weight: 700;
     padding-left: 6px;
+  }
+
+  .main-article-text {
+    bottom: 90px;
+    left: 60px;
+  }
+  
+  p.main-article-text {
+    font-size: 50px;
+    max-width: 580px;
   }
 
   nav {
