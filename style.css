@@ -38,9 +38,9 @@ h1 {
 }
 
 .main-container {
+  display: grid;
   min-height: 100%;
   width: 100%;
-  display: grid;
   place-items: center;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -69,17 +69,45 @@ h1 {
   "carousel-2 carousel-2 carousel-2";
 }
 
+.secondary-nav-container {
+  display: grid;
+  grid-area: secondary-nav;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  grid-template-columns: 1fr 2fr;
+  /* grid-template-rows: 200px; */
+}
+
 .grid-item {
   border-radius: 4px;
   display: flex;
   align-items: center;
 }
 
-.grid-item-1 {
+.secondary-nav {
+  display: flex;
+  background: var(--biscuit);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px 0 0 4px;
+}
+
+.secondary-nav-display {
+  display: flex;
+  background: #fff;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 4px 4px 0;
+}
+
+/* .grid-item-1 {
   grid-area: secondary-nav;
   background: #fff;
   justify-content: center;
-}
+} */
 
 .grid-item-2 {
   grid-area: article-1;
