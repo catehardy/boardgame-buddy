@@ -38,9 +38,9 @@ h1 {
 }
 
 .main-container {
+  display: grid;
   min-height: 100%;
   width: 100%;
-  display: grid;
   place-items: center;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -69,23 +69,46 @@ h1 {
   "carousel-2 carousel-2 carousel-2";
 }
 
+.secondary-nav-container {
+  display: grid;
+  grid-area: secondary-nav;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  grid-template-columns: 1fr 2fr;
+  /* grid-template-rows: 200px; */
+}
+
 .grid-item {
   border-radius: 4px;
   display: flex;
   align-items: center;
 }
 
-.grid-item-1 {
-  grid-area: secondary-nav;
-  background: #fff;
+.secondary-nav {
+  display: flex;
+  background: var(--biscuit);
+  width: 100%;
   justify-content: center;
+  align-items: center;
+  border-radius: 4px 0 0 4px;
+}
+
+.secondary-nav-display {
+  display: flex;
+  background: #fff;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 4px 4px 0;
 }
 
 .grid-item-2 {
   grid-area: article-1;
-  margin-right: -2.5px;
+  margin-right: -5px;
   max-width: 400px;
   height: auto;
+  border-radius: 4px;
 }
 
 .grid-item-3 {
@@ -147,6 +170,27 @@ h1 {
 a.article-text {
   text-decoration: none;
   color: #000;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.main-article-text {
+  position: absolute;
+  bottom: 30px;
+  left: 70px;
+  padding: 0;
+  margin: 0;
+}
+
+p.main-article-text {
+  font-size: 32px;
+  font-weight: 900;
+  max-width: 260px;
 }
 
 /* NAVBAR SEARCH & DROPDOWN */
@@ -211,7 +255,6 @@ input:focus {
   color: #fff;
   background-color: var(--dark-orchid);
 }
-
 
 /* NAV */
 
@@ -305,7 +348,6 @@ nav .search-box {
 nav .search-box input {
   border: none;
   height: 100%;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
@@ -400,10 +442,11 @@ footer {
     min-width: 300px;
     max-width: 490px;
     grid-template-columns: 1fr;
-    grid-template-rows: 340px auto auto auto 160px 160px 220px 220px;
+    grid-template-rows: auto auto auto auto auto 160px 160px 220px 220px;
     row-gap: 10px;
     column-gap: 10px;
     grid-template-areas:
+      "secondary-nav"
       "secondary-nav"
       "article-1"
       "article-2"
@@ -414,9 +457,26 @@ footer {
       "carousel-2";
   }
 
-.grid-item {
-  max-width: 300px;
-}
+  .secondary-nav-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .secondary-nav {
+    height: 300px;
+    width: auto;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .secondary-nav-display {
+    height: 260px;
+    width: auto;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .grid-item {
+    max-width: 300px;
+  }
 
   .grid-item-2,
   .grid-item-3,
@@ -435,6 +495,16 @@ footer {
     font-size: 17px;
     font-weight: 700;
     padding-left: 4px;
+  }
+
+  .main-article-text {
+    bottom: 26px;
+    left: 42px;
+  }
+  
+  p.main-article-text {
+    font-size: 22px;
+    max-width: 220px;
   }
 
   nav {
@@ -546,10 +616,11 @@ footer {
     min-width: 490px;
     max-width: 1180px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 360px auto auto auto 220px 220px;
+    grid-template-rows: auto auto auto auto auto 260px 260px;
     row-gap: 10px;
     column-gap: 10px;
     grid-template-areas:
+      "secondary-nav secondary-nav"
       "secondary-nav secondary-nav"
       "article-1 article-1"
       "article-2 article-3"
@@ -557,6 +628,7 @@ footer {
       "carousel-1 carousel-1"
       "carousel-2 carousel-2";
   }
+
   .grid-item-2,
   .grid-item-3,
   .grid-item-4,
@@ -566,7 +638,29 @@ footer {
   }
 
   .grid-item {
-    max-width: 740px;
+    max-width: 700px;
+  }
+  
+  .secondary-nav-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .secondary-nav {
+    height: 680px;
+    width: auto;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .secondary-nav-display {
+    height: 360px;
+    width: auto;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .grid-item-2 {
+    max-width: 700px;
+    height: auto;
   }
 
   .article-text {
@@ -574,6 +668,16 @@ footer {
     font-size: 20px;
     font-weight: 700;
     padding-left: 6px;
+  }
+
+  .main-article-text {
+    bottom: 90px;
+    left: 60px;
+  }
+  
+  p.main-article-text {
+    font-size: 50px;
+    max-width: 580px;
   }
 
   nav {
