@@ -188,9 +188,14 @@ a.article-text {
 }
 
 p.main-article-text {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 900;
   max-width: 260px;
+}
+
+a p.main-article-text {
+  text-decoration: none;
+  color: #000;
 }
 
 /* NAVBAR SEARCH & DROPDOWN */
