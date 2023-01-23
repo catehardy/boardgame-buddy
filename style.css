@@ -32,7 +32,7 @@ body {
 }
 
 h1 {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Ruda', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -58,7 +58,7 @@ h1 {
   min-width: 1200px;
   max-width: 1500px;
   grid-template-columns: auto 1fr 1fr;
-  grid-template-rows: 360px auto auto 320px 320px;
+  grid-template-rows: auto auto auto 320px 320px;
   row-gap: 18px;
   column-gap: 18px;
   grid-template-areas:
@@ -69,26 +69,30 @@ h1 {
   "carousel-2 carousel-2 carousel-2";
 }
 
-.secondary-nav-container {
-  display: grid;
-  grid-area: secondary-nav;
-  height: auto;
-  width: 100%;
-  justify-content: center;
-  grid-template-columns: 1fr 2fr;
-  /* grid-template-rows: 200px; */
-}
-
 .grid-item {
   border-radius: 4px;
   display: flex;
   align-items: center;
 }
 
+/* SECONDARY NAV - replaces grid-item-1 */
+
+.secondary-nav-container {
+  display: grid;
+  grid-area: secondary-nav;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  grid-template-columns: 400px 2fr;
+  margin: 0;
+  padding: 0;
+}
+
 .secondary-nav {
   display: flex;
   background: var(--biscuit);
   width: 100%;
+  height: 400px;
   justify-content: center;
   align-items: center;
   border-radius: 4px 0 0 4px;
@@ -97,9 +101,35 @@ h1 {
 .secondary-nav-display {
   display: flex;
   background: #fff;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+  height: 400px;
+  width: 824px;
+  justify-content: space-between;
+  border-radius: 0 4px 4px 0;
+}
+
+.secondary-nav-display-section-1 {
+  padding: 10px 24px;
+}
+
+.secondary-nav-display-section-1 h2 {
+  font-family: 'Ruda', sans-serif;
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.secondary-nav-display-section-1 p {
+  font-size: 15px;
+  text-align: left;
+}
+
+.secondary-nav-display-section-2 {
+  /* margin: 0;
+  padding: 0; */
+}
+
+/* logo within secondary nav container */
+.bgb-logo-large {
+  max-width: 400px;
   border-radius: 0 4px 4px 0;
 }
 
@@ -309,7 +339,7 @@ nav {
 nav .icon {
   font-size: 38px;
   font-weight: 900;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Ruda', sans-serif;
   cursor: pointer;
   align-self: center;
 }
@@ -462,21 +492,49 @@ footer {
       "carousel-2";
   }
 
+  /* SECONDARY NAV - replaces grid-item-1 */
+
   .secondary-nav-container {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
   }
 
   .secondary-nav {
     height: 300px;
-    width: auto;
+    width: 300px;
     border-radius: 4px 4px 0 0;
   }
   
   .secondary-nav-display {
-    height: 260px;
-    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    height: auto;
+    width: 300px;
     border-radius: 0 0 4px 4px;
+  }
+  
+  .secondary-nav-display-section-1 h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+  
+  .secondary-nav-display-section-1 p {
+    font-size: 13px;
+  }
+  
+  .secondary-nav-display-section-2 {
+    background-color: var(--dark-orchid);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 0 0 4px 4px;
+  }
+  
+  /* logo within secondary nav container */
+  .bgb-logo-large {
+    max-width: 240px;
+    border-radius: 0;
   }
 
   .grid-item {
@@ -560,6 +618,7 @@ footer {
   nav ol li:hover a {
     background: var(--peach);
     color: black;
+    border-radius: 0;
   }
   nav ol li:nth-child(1) {
     transform: translateX(-150px);
@@ -646,6 +705,8 @@ footer {
     max-width: 700px;
   }
   
+  /* SECONDARY NAV - replaces grid-item-1 */
+
   .secondary-nav-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
@@ -658,9 +719,21 @@ footer {
   }
   
   .secondary-nav-display {
-    height: 360px;
-    width: auto;
+    height: 400px;
+    width: 700px;
     border-radius: 0 0 4px 4px;
+  }
+
+  .secondary-nav-display-section-2 {
+    background-color: var(--dark-orchid);
+    display: flex;
+    align-content: center;
+  }
+
+  /* logo within secondary nav container */
+  .bgb-logo-large {
+    max-width: 200px;
+    border-radius: 0;
   }
 
   .grid-item-2 {
