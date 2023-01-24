@@ -557,13 +557,14 @@ footer {
 
 /* MEDIA QUERIES */
 
+/* MOBILE */
 @media only screen and (max-width: 820px) {
   .homepage-container {
     margin: 10px;
     min-width: 300px;
     max-width: 490px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto 160px 160px 220px 220px;
+    grid-template-rows: auto auto auto auto auto auto auto 220px 220px;
     row-gap: 10px;
     column-gap: 10px;
     grid-template-areas:
@@ -589,11 +590,11 @@ footer {
   }
 
   .nav-box-7 {
-    border-radius: 4px;
+    border-radius: 0 0 0 4px;
   }
 
   .nav-box-9 {
-    border-radius: 4px;
+    border-radius: 0 0 4px 0;
   }
 
   .secondary-nav-container {
@@ -794,6 +795,7 @@ footer {
   }
 }
 
+/* TABLETS and SMALL SCREENS */
 @media only screen and (min-width: 820px) and (max-width: 1250px) {
   .homepage-container {
     margin: 10px;
@@ -831,13 +833,18 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     border-radius: 4px;
+    grid-template-areas:
+    "display"
+    "second-nav"
   }
 
   .secondary-nav {
+    grid-area: second-nav;
     height: 680px;
-    border: var(--dark-orchid) solid 20px;
+    background: #a64ac9;
+    border: var(--dark-orchid) solid 40px;
     width: auto;
-    border-radius: 4px 4px 0 0;
+    border-radius: 0 0 4px 4px;
   }
 
   .nav-box-3 {
@@ -845,20 +852,40 @@ footer {
   }
 
   .nav-box-7 {
-    border-radius: 0;
+    border-radius: 0 0 0 4px;
+  }
+
+  .nav-box-9 {
+    border-radius: 0 0 4px 0;
+  }
+
+  .nav-box-2, .nav-box-4, .nav-box-6, .nav-box-8 {
+    background: var(--peach);
+  }
+
+  .circle {
+    font-size: 18px;
   }
   
   .secondary-nav-display {
+    grid-area: display;
     height: 400px;
     width: 700px;
-    border-radius: 0 0 4px 4px;
+    border-radius: 4px 4px 0 0;
+    background-color: var(--dark-orchid);
+  }
+
+  .secondary-nav-display-section-1 {
+    border-radius: 4px 0 30px 0;
+    background-color: #fff;
+    padding-left: 40px;
   }
 
   .secondary-nav-display-section-2 {
     background: var(--dark-orchid);
     display: grid;
     align-content: center;
-    border-radius: 0 0 4px 0;
+    border-radius: 0 4px 0 0;
   }
 
   /* logo within secondary nav container */
