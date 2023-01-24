@@ -184,6 +184,11 @@ h1 {
   background: #000;
 }
 
+a.navbox-circle-text {
+  text-decoration: none;
+  color: #fff;
+}
+
 .secondary-nav-display {
   display: flex;
   background: #fff;
@@ -206,11 +211,6 @@ h1 {
 .secondary-nav-display-section-1 p {
   font-size: 15px;
   text-align: left;
-}
-
-.secondary-nav-display-section-2 {
-  /* margin: 0;
-  padding: 0; */
 }
 
 /* logo within secondary nav container */
@@ -622,6 +622,7 @@ footer {
     height: auto;
     width: 300px;
     border-radius: 4px 4px 0 0;
+    background: var(--dark-orchid);
     grid-template-areas:
     "section-2"
     "section-1";
@@ -629,9 +630,12 @@ footer {
 
   .secondary-nav-display-section-1 {
     grid-area: section-1;
-    border-bottom: var(--dark-orchid) solid 8px;
-    border-left: var(--dark-orchid) solid 8px;
-    border-right: var(--dark-orchid) solid 8px;
+    width: 92%;
+    height: 96%;
+    background: #fff;
+    border-radius: 4px;
+    justify-self: center;
+    padding-bottom: 20px;
   }
   
   .secondary-nav-display-section-1 h2 {
