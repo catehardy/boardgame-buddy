@@ -89,13 +89,99 @@ h1 {
 }
 
 .secondary-nav {
-  display: flex;
-  background: var(--biscuit);
+  display: grid;
+  background: var(--peach);
   width: 100%;
   height: 400px;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   border-radius: 4px 0 0 4px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+  "nav-box-1 nav-box-2 nav-box-3"
+  "nav-box-4 nav-box-5 nav-box-6"
+  "nav-box-7 nav-box-8 nav-box-9";
+}
+
+.nav-box-1 {
+  grid-area: nav-box-1;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  position: relative;
+  border-radius: 4px 0 0 0;
+}
+
+.nav-box-2 {
+  grid-area: nav-box-2;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.nav-box-3 {
+  grid-area: nav-box-3;
+  background: #fff;
+}
+
+.nav-box-4 {
+  grid-area: nav-box-4;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.nav-box-5 {
+  grid-area: nav-box-5;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.nav-box-6 {
+  grid-area: nav-box-6;
+}
+
+.nav-box-7 {
+  grid-area: nav-box-7;
+  background: #fff;
+  border-radius: 0 0 0 4px;
+}
+
+.nav-box-8 {
+  grid-area: nav-box-8;
+}
+
+.nav-box-9 {
+  grid-area: nav-box-9;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  padding: 4px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bolder;
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purple-circle {
+  background: var(--dark-orchid);
+}
+
+.black-circle {
+  background: #000;
 }
 
 .secondary-nav-display {
@@ -494,24 +580,57 @@ footer {
 
   /* SECONDARY NAV - replaces grid-item-1 */
 
+  .circle {
+    font-size: 11.5px;
+  }
+
+  .nav-box-1 {
+    border-radius: 0;
+  }
+
+  .nav-box-7 {
+    border-radius: 4px;
+  }
+
+  .nav-box-9 {
+    border-radius: 4px;
+  }
+
   .secondary-nav-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "display"
+    "display"
+    "second-nav";
+    border-radius: 4px 4px 0 0;
   }
 
   .secondary-nav {
+    grid-area: second-nav;
     height: 300px;
     width: 300px;
-    border-radius: 4px 4px 0 0;
+    border-radius: 0 0 4px 4px;
   }
   
   .secondary-nav-display {
     display: grid;
+    grid-area: display;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     height: auto;
     width: 300px;
-    border-radius: 0 0 4px 4px;
+    border-radius: 4px 4px 0 0;
+    grid-template-areas:
+    "section-2"
+    "section-1";
+  }
+
+  .secondary-nav-display-section-1 {
+    grid-area: section-1;
+    border-bottom: var(--dark-orchid) solid 8px;
+    border-left: var(--dark-orchid) solid 8px;
+    border-right: var(--dark-orchid) solid 8px;
   }
   
   .secondary-nav-display-section-1 h2 {
@@ -524,16 +643,17 @@ footer {
   }
   
   .secondary-nav-display-section-2 {
+    grid-area: section-2;
     background-color: var(--dark-orchid);
     display: flex;
     align-content: center;
     justify-content: center;
-    border-radius: 0 0 4px 4px;
+    border-radius: 4px 4px 0 0;
   }
   
   /* logo within secondary nav container */
   .bgb-logo-large {
-    max-width: 240px;
+    max-width: 200px;
     border-radius: 0;
   }
 
@@ -704,18 +824,28 @@ footer {
   .grid-item {
     max-width: 700px;
   }
-  
+
   /* SECONDARY NAV - replaces grid-item-1 */
 
   .secondary-nav-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    border-radius: 4px;
   }
 
   .secondary-nav {
     height: 680px;
+    border: var(--dark-orchid) solid 20px;
     width: auto;
     border-radius: 4px 4px 0 0;
+  }
+
+  .nav-box-3 {
+    border-radius: 0 4px 0 0;
+  }
+
+  .nav-box-7 {
+    border-radius: 0;
   }
   
   .secondary-nav-display {
@@ -725,9 +855,10 @@ footer {
   }
 
   .secondary-nav-display-section-2 {
-    background-color: var(--dark-orchid);
-    display: flex;
+    background: var(--dark-orchid);
+    display: grid;
     align-content: center;
+    border-radius: 0 0 4px 0;
   }
 
   /* logo within secondary nav container */
