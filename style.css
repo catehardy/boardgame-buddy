@@ -10,11 +10,13 @@
   --peach: #ffb48f;
   --biscuit: #f5e6cc;
   --blue-violet: #8a2be2;
+  --deepest-gray: #1e1e1e;
 }
 
 html {
   min-height: 100%;
   width: 100%;
+  color: var(--deepest-gray);
 }
 
 body {
@@ -23,7 +25,7 @@ body {
   border: 0;
   min-height: 100%;
   width: 100%;
-  background: black;
+  background: var(--deepest-gray);
   background-repeat: no-repeat;
   background-attachment: fixed;
   text-align: center;
@@ -181,7 +183,7 @@ h1 {
 }
 
 .black-circle {
-  background: #000;
+  background: var(--deepest-gray);
 }
 
 a.navbox-circle-text {
@@ -351,7 +353,7 @@ input:focus {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
+  color: var(--deepest-gray);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -735,14 +737,14 @@ footer {
     opacity: 0;
   }
   nav ol li a {
-    color: black;
+    color: var(--deepest-gray);
     font-size: 20px;
     padding: 25px;
     display: block;
   }
   nav ol li:hover a {
     background: var(--peach);
-    color: black;
+    color: var(--deepest-gray);
     border-radius: 0;
   }
   nav ol li:nth-child(1) {
